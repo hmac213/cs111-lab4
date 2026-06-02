@@ -210,13 +210,13 @@ void write_superblock(int fd) {
 	superblock.s_mtime = 0;
 	superblock.s_wtime = current_time;
 	superblock.s_mnt_count         = 0;
-	superblock.s_max_mnt_count     = 0;
+	superblock.s_max_mnt_count     = -1;
 	superblock.s_magic = EXT2_SUPER_MAGIC;
-	superblock.s_state             = 0;
-	superblock.s_errors            = 0;
+	superblock.s_state             = 1;
+	superblock.s_errors            = 1;
 	superblock.s_minor_rev_level   = 0;
 	superblock.s_lastcheck = current_time;
-	superblock.s_checkinterval     = 0;
+	superblock.s_checkinterval     = 1;
 	superblock.s_creator_os        = 0;
 	superblock.s_rev_level         = 0;
 	superblock.s_def_resuid        = 0;
