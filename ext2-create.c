@@ -495,8 +495,6 @@ void write_hello_world_file_block(int fd)
 		errno_exit("lseek");
 	}
 
-	ssize_t bytes_remaining = BLOCK_SIZE;
-
 	if (write(fd, "Hello world\n", 12) != 12) {
 		errno_exit("write");
 	}
